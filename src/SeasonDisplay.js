@@ -22,11 +22,11 @@ const season = getSeason(lat, new Date().getMonth());
 const {text, seasonIcon} = seasonConfig[season];
 
     return (
-        <>
+        <div className={`season-display ${season}`}>
     <i className={`${seasonIcon} icon massive icon-left`}></i>
-    <div>{text}</div>
+    <h1>{text}</h1>
     <i className={`${seasonIcon} icon massive icon-right`}></i>
-    </>
+    </div>
     )
 };
 
