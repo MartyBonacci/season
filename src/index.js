@@ -18,8 +18,8 @@ class App extends React.Component {
     render() {
         return (
         <div>
-            {this.state.errMessage ? `Error: ${this.state.errMessage}` : this.state.lat ? `Latitude: ${this.state.lat}` : <div>Loading...</div>}
-         <SeasonDisplay/>   
+            {this.state.errMessage ? `Error: ${this.state.errMessage}` : this.state.lat ? <SeasonDisplay lat={this.state.lat}/> : <div>Loading...</div>}
+           
         </div>
         )
     }
