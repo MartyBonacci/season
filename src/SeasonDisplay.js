@@ -13,7 +13,7 @@ const seasonConfig = {
 }
 
 const getSeason = (lat, month) => {
-    return lat > 0 ? month > 2 && month < 9 ? "summer" : "winter" : month > 2 && month < 0 ? "winter" : "summer"
+    return (lat > 0) ? ((month > 2 && month < 9) ? "summer" : "winter") : ((month > 2 && month < 9) ? "winter" : "summer")
 }
 
 const SeasonDisplay = ({lat}) => {
