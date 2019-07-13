@@ -17,12 +17,16 @@ class App extends React.Component {
         );
     }
 
+    renderContent(){
+        return(
+        this.state.errMessage ? `Error: ${this.state.errMessage}` : this.state.lat ? <SeasonDisplay lat={this.state.lat}/> : <Spinner message="Please accept location request."/>
+        )
+    }
 
     render() {
         return (
         <div>
-            {this.state.errMessage ? `Error: ${this.state.errMessage}` : this.state.lat ? <SeasonDisplay lat={this.state.lat}/> : <Spinner message="Please accept location request."/>}
-           
+            {this.renderContent()}
         </div>
         )
     }
